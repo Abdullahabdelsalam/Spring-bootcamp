@@ -1,4 +1,4 @@
 # Spring bootcamp
 * ## Spring Core
-  > ### -  [x] [` Inversion of Control`]()
+  > ### - [X] [` Inversion of Control`]()
   > ### -[` Dependency Injection`]()
