@@ -8,4 +8,4 @@
     > ### - [` Bean Scopes`](/Spring_Core/practice-BeanScopes)
     > ### - [` Beans Lifecycle`](/Spring_Core/practice-BeansLifecycle)
  * ## Spring MVC
-    > ### - [` APP to Calculate the Age`](/Spring_Core/AppCalcAge)
+    > ### - [` APP to Calculate the Age`](/Spring_MVC/AppCalcAge)
