@@ -3,7 +3,10 @@ package com.practice.springboot.thymeleafdemo.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -38,6 +41,59 @@ public class HelloWorldController {
         return "helloworld";
     }
 
+//    @RequestMapping("/processFormVersionThree")
+//    public String processFormVersionThree(@RequestParam("studentName") String theName  , Model model){
+//
+//        // read the request parameter from the HTML form
+////        String theName = request.getParameter("studentName");
+//
+//        // convert the data to all caps
+//        theName = theName.toUpperCase();
+//
+//        // create the message
+//        String result = "Hey My Frind From v3!" + theName;
+//
+//        // add message to the model
+//        model.addAttribute("message", result);
+//
+//        return "helloworld";
+//    }
+
+//    @GetMapping("/processFormVersionThree")
+//    public String processFormVersionThree(@RequestParam("studentName") String theName  , Model model){
+//
+//        // read the request parameter from the HTML form
+////        String theName = request.getParameter("studentName");
+//
+//        // convert the data to all caps
+//        theName = theName.toUpperCase();
+//
+//        // create the message
+//        String result = "Hey My Frind From v3!" + theName;
+//
+//        // add message to the model
+//        model.addAttribute("message", result);
+//
+//        return "helloworld";
+//    }
+
+    @PostMapping("/processFormVersionThree")
+    public String processFormVersionThree(@RequestParam("studentName") String theName  , Model model){
+
+        // read the request parameter from the HTML form
+//        String theName = request.getParameter("studentName");
+
+        // convert the data to all caps
+        theName = theName.toUpperCase();
+
+        // create the message
+        String result = "Hey My Frind From v3!" + theName;
+
+        // add message to the model
+        model.addAttribute("message", result);
+
+        return "helloworld";
+    }
 
 
 }
