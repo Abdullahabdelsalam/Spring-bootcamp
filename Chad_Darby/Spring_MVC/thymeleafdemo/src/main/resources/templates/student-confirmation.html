@@ -5,6 +5,20 @@
     <title> Student </title>
 </head>
 <body>
-The student is confirmed: <span th:text="${student.firstName} + ' ' + ${student.lastName}" />
+
+The student Name: <span th:text="${student.firstName}+' '+${student.lastName}"/>
+
+<br><br>
+
+The Country: <span th:text="${student.country}" />
+
+<br><br>
+
+Favorite Programming Language: <span th:text="${student.programmingLanguage}" />
+
+<br><br>
+
+favorite Operating Systems: <span th:text="${student.favoriteSystems}" />
+
 </body>
 </html>
