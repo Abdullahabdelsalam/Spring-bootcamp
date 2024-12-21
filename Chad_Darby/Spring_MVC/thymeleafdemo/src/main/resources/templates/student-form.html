@@ -6,9 +6,32 @@
 </head>
 <body>
     <form th:action="@{/processStudentForm}" th:object="${student}" method="post">
+
         First Name:<input type="text" th:field="*{firstName}" />
         <br><br>
         Last Name:<input type="text" th:filed="*{lastName}" />
+
+        <br><br>
+        Country:
+        <select th:field="*{country}">
+            <option th:value="Brazil">Brazil</option>
+            <option th:value="France">France</option>
+            <option th:value="Germany">Germany</option>
+            <option th:value="India">India</option>
+        </select>
+
+        <br><br>
+
+        Favorite Programming Language:
+        <input type="radio" th:field="*{programmingLanguage}" th:value="Go">Go</input>
+        <input type="radio" th:field="*{programmingLanguage}" th:value="Java">Java</input>
+        <input type="radio" th:field="*{programmingLanguage}" th:value="Python">Python</input>
+
+        <br><br>
+        favorite Operating Systems:
+        <input type="checkbox" th:field="*{favoriteSystems}" th:value="Linux">Linux</input>
+        <input type="checkbox" th:field="*{favoriteSystems}" th:value="macOS">macOS</input>
+        <input type="checkbox" th:field="*{favoriteSystems}" th:value="'Microsoft Windows'">Microsoft Windows</input>
 
         <br><br>
 
