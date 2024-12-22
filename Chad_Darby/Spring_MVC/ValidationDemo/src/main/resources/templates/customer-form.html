@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title> Customer Form </title>
 </head>
 <body>
+<form action="@{/processForm}" th:object="${customer}" method="post">
+
+    first name :<input type="text" th:field="*{firstName}">
+    <br><br>
+    last name : <input type="text" th:field="*{lastname}">
+<!--    show error message-->
+<span th:if="${#fields.hasErrors(`lastName`)}"
+      th:Errors="${lastName}"
+      cless="error"></span>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
