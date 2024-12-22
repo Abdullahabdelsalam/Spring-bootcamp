@@ -5,14 +5,14 @@
     <title> Customer Form </title>
 </head>
 <body>
-<form action="@{/processForm}" th:object="${customer}" method="post">
+<form th:action="@{/processForm}" th:object="${customer}" method="post">
 
     first name :<input type="text" th:field="*{firstName}">
     <br><br>
-    last name :<input type="text" th:field="*{lastname}">
+    last name :<input type="text" th:field="*{lastName}">
 <!--    show error message-->
-<span th:if="${#fields.hasErrors(`lastName`)}"
-      th:Errors="${lastName}"
+<span th:if="${#fields.hasErrors('lastName')}"
+      th:Errors="*{lastName}"
       cless="error"></span>
     <br><br>
     <input type="submit" value="Submit">
