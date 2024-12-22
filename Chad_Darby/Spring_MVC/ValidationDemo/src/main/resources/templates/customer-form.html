@@ -9,7 +9,7 @@
 
     first name :<input type="text" th:field="*{firstName}">
     <br><br>
-    last name : <input type="text" th:field="*{lastname}">
+    last name :<input type="text" th:field="*{lastname}">
 <!--    show error message-->
 <span th:if="${#fields.hasErrors(`lastName`)}"
       th:Errors="${lastName}"
