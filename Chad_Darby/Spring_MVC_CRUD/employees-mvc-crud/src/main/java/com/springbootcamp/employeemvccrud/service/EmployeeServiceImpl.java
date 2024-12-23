@@ -17,10 +17,15 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeServiceImpl(EmployeeRepository theEmployeeRepository) {
         employeeRepository = theEmployeeRepository;
     }
+//
+//    @Override
+//    public List<Employee> findAll() {
+//        return employeeRepository.findAll();
+//    }
 
     @Override
     public List<Employee> findAll() {
-        return employeeRepository.findAll();
+        return employeeRepository.findAllByOrderByLastNameAsc();
     }
 
     @Override
