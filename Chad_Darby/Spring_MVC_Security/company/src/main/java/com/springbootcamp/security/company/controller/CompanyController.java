@@ -11,6 +11,11 @@ public class CompanyController {
         return "home";
     }
 
+    @GetMapping("/leaders")
+    public String showLeaders(){
+        return "leaders";
+    }
+
 
 
 }
