@@ -16,6 +16,10 @@ public class CompanyController {
         return "leaders";
     }
 
+    @GetMapping("/systems")
+    public String showSystems() {
 
+        return "systems";
+    }
 
 }
