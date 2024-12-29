@@ -19,11 +19,11 @@ public class StudentApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		return runner -> {
-			System.out.println("Hello World");
-			//createStudent(studentDAO);
-			//createMultipleStudent(studentDAO);
-			//readStudent(studentDAO);
-			//queryForStudents(studentDAO);
+//			System.out.println("Hello World");
+//			createStudent(studentDAO);
+//			createMultipleStudent(studentDAO);
+//			readStudent(studentDAO);
+			queryForStudents(studentDAO);
 			//queryByNameStudent(studentDAO);
 			//queryByFirstORLast(studentDAO);
 			//queryByEmailLIKE(studentDAO);
@@ -125,10 +125,14 @@ public class StudentApplication {
 
 		// create multiple student
 		System.out.println("Create multiple new student object ...");
-		Student stOmer = new Student("Omer","Nasser","omerN204@gmail.com");
-		Student stNader = new Student("Nader","Mohammed","naderM204@gmail.com");
-		Student stMohammed = new Student("Mohammed","Saad","mohamedS204@gmail.com");
-		Student stHany = new Student("Hany","shams","hanyS204@gmail.com");
+		Student stOmer = new Student
+				("Omer","Nasser","omerN204@gmail.com");
+		Student stNader = new Student
+				("Nader","Mohammed","naderM204@gmail.com");
+		Student stMohammed = new Student
+				("Mohammed","Saad","mohamedS204@gmail.com");
+		Student stHany = new Student
+				("Hany","shams","hanyS204@gmail.com");
 
 		//save multiple the student object
 		System.out.println("Save multiple the Student ...");
@@ -143,14 +147,17 @@ public class StudentApplication {
 
 		// create the student object
 		System.out.println("Create new student object ...");
-		Student stAbdallah = new Student("Abdallah","shams","abdallah204@gmail.com");
+		Student stAbdallah = new Student
+				("Abdallah","shams",
+						"abdallah204@gmail.com");
 
 		//save the student object
 		System.out.println("Save the Student ...");
 		studentDAO.save(stAbdallah);
 
 		//display id the save student
-		System.out.println("Save student. Generated id : " + stAbdallah.getId());
+		System.out.println("Save student. Generated id : "
+				+ stAbdallah.getId());
 	}
 
 }
