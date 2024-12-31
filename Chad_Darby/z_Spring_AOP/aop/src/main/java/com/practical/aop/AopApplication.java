@@ -24,10 +24,20 @@ public class AopApplication {
 
 	private void theBeforeAdvice(AccountDAO theAccountDAO ,MembershipDAO theMembershipDAO) {
 
-		Account account = new Account("ahamed","level(9)");
+		Account account = new Account();
 		theAccountDAO.addAccount(account);
+		theAccountDAO.doWork();
+		theAccountDAO.setName("robt");
+		theAccountDAO.setServiceCode("silver");
+
+		String name = theAccountDAO.getName();
+		String code = theAccountDAO.getServiceCode();
+
 
 		theMembershipDAO.addSillyMember();
+		theMembershipDAO.goToSleep();
+
+
 	}
 
 
