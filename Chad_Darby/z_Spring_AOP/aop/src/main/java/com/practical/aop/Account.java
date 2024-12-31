@@ -26,4 +26,5 @@ public class Account {
         this.name = name;
         this.level = level;
     }
+    public Account(){}
 }
