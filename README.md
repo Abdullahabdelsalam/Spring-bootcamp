@@ -9,3 +9,4 @@
     > ### - [` Beans Lifecycle`](/Spring_Core/practice-BeansLifecycle)
  * ## Spring MVC
     > ### - [` APP to Calculate the Age`](/Spring_MVC/AppCalcAge)
+    > ### - [` APP to User Information`](/Spring_MVC/UserForm)
