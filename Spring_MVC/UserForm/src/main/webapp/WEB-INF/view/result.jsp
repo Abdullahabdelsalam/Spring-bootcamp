@@ -36,10 +36,12 @@
 </head>
 <body>
 <div id="input-wrapper">
-    <h1 id="form-heading" > The User Information </h1>
-    <div class="input-box"> ${user.userName} =>> User Name</div>
-    <div class="input-box"> ${user.password} =>> password</div>
-    <div class="input-box"> ${user.center} =>> center </div>
+    <h1 id="form-heading" > ${theUser.userName} The User Information </h1>
+    <div class="input-box">User Name =>> ${theUser.userName} </div>
+    <div class="input-box">password =>> ${theUser.password} </div>
+    <div class="input-box">country =>>  ${theUser.country} </div>
+    <div class="input-box">Programming Language =>> ${theUser.programmingLanguage} </div>
+    <div class="input-box">Operating System =>> ${theUser.operatingSystem} </div>
 </div>
 </body>
 </html>
