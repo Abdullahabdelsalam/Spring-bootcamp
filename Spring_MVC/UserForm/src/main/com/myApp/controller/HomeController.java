@@ -14,15 +14,15 @@ public class HomeController
     @RequestMapping("/" )
     public String showHomePage(Model model)
     {
-        model.addAttribute("user", new User());
+        model.addAttribute("user" , new User());
         return "userForm";
     }
 
-    @RequestMapping(value="/process",method= RequestMethod.POST)
+    @RequestMapping("/process")
     public String processForm(@ModelAttribute("user") User user , Model model)
     {
 
-        model.addAttribute("user" , user);
+        model.addAttribute("theUser" , user );
         return "result";
     }
 }
