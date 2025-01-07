@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,7 +14,8 @@
         <div class="form-container">
             <h3 class="text-center form-title mb-4">User Form</h3>
             <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-            <form method="POST" action="/user/process" modelAttribute="user">
+
+            <form:form action="/user/process"  modelAttribute="user">
                 <!-- Username Field -->
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
@@ -78,7 +78,7 @@
                 </div>
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-custom w-100">Submit</button>
-            </form>
+            </form:form>
         </div>
     </div>
 
