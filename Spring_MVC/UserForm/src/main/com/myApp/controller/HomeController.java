@@ -1,42 +1,29 @@
 package main.com.myApp.controller;
 
+import main.com.myApp.controller.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDate;
 
 @Controller
 public class HomeController
 {
-
-    @RequestMapping("/")
-    public String showHomePage()
+    @RequestMapping("/" )
+    public String showHomePage(Model model)
     {
+        model.addAttribute("user", new User());
         return "userForm";
     }
 
-    @RequestMapping("/processForm")
-    public String processForm(HttpServletRequest request , Model model)
+    @RequestMapping(value="/process",method= RequestMethod.POST)
+    public String processForm(@ModelAttribute("user") User user , Model model)
     {
-        //getting parameters from request
-        String year = request.getParameter("year");
-        String month = request.getParameter("month");
-        String day = request.getParameter("day");
 
-        //processing the data that received from the request
-        long yearsDifference = LocalDate.now().getYear() -  Integer.parseInt(year);
-        long monthsDifference = LocalDate.now().getMonthValue() -  Integer.parseInt(month);
-        long daysDifference = LocalDate.now().getDayOfMonth() -  Integer.parseInt(day);
-
-        //adding data to the model
-        model.addAttribute("year" , yearsDifference);
-        model.addAttribute("month" , monthsDifference);
-        model.addAttribute("day" , daysDifference);
-
-        //step3: return view page
-        return "age";
+        model.addAttribute("user" , user);
+        return "result";
     }
 }
 
