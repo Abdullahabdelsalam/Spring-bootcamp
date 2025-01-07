@@ -4,74 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional User Form</title>
+    <title> User Form</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f3f4f6;
-        }
-
-        .form-container {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            max-width: 500px;
-            margin: auto;
-        }
-
-        .form-title {
-            font-weight: bold;
-            color: #0d6efd;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .form-label {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #6c757d;
-        }
-
-        .btn-custom {
-            background-color: #198754;
-            color: #fff;
-            font-weight: bold;
-            border: none;
-            padding: 10px 15px;
-        }
-
-        .btn-custom:hover {
-            background-color: #146c43;
-        }
-
-        .form-check-input:checked {
-            background-color: #198754;
-            border-color: #198754;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/user-form.css"
 </head>
 
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="form-container">
             <h3 class="text-center form-title mb-4">User Form</h3>
-            <form>
+            <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+            <form method="POST" action="/user/process" modelAttribute="user">
                 <!-- Username Field -->
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Administrator">
+                    <input type="text" class="form-control" id="username" placeholder="Administrator" path="userName">
                 </div>
                 <!-- Password Field -->
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="********">
+                    <input type="password" class="form-control" id="password" placeholder="********" path="password">
                 </div>
                 <!-- Country Dropdown -->
                 <div class="mb-3">
                     <label for="country" class="form-label">Country</label>
-                    <select class="form-select" id="country">
+                    <select class="form-select" id="country" path="country">
                         <option selected>Brazil</option>
                         <option>United States</option>
                         <option>India</option>
@@ -83,19 +41,19 @@
                     <label class="form-label">Preferred Programming Language</label>
                     <div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="language" id="java" value="java">
+                            <input class="form-check-input" type="radio" name="language" id="java" value="java" path="programmingLanguage">
                             <label class="form-check-label" for="java">Java</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="language" id="csharp" value="csharp">
+                            <input class="form-check-input" type="radio" name="language" id="csharp" value="csharp" path="programmingLanguage">
                             <label class="form-check-label" for="csharp">C#</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="language" id="php" value="php">
+                            <input class="form-check-input" type="radio" name="language" id="php" value="php" path="programmingLanguage">
                             <label class="form-check-label" for="php">PHP</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="language" id="ruby" value="ruby">
+                            <input class="form-check-input" type="radio" name="language" id="ruby" value="ruby" path="programmingLanguage">
                             <label class="form-check-label" for="ruby">Ruby</label>
                         </div>
                     </div>
@@ -105,15 +63,15 @@
                     <label class="form-label">Preferred Operating System</label>
                     <div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="linux" value="linux" checked>
+                            <input class="form-check-input" type="checkbox" id="linux" value="linux" checked path="operatingSystem">
                             <label class="form-check-label" for="linux">Linux</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="macos" value="macos" >
+                            <input class="form-check-input" type="checkbox" id="macos" value="macos" path="operatingSystem">
                             <label class="form-check-label" for="macos">Mac OS</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="windows" value="windows" >
+                            <input class="form-check-input" type="checkbox" id="windows" value="windows" path="operatingSystem">
                             <label class="form-check-label" for="windows">MS Windows</label>
                         </div>
                     </div>
