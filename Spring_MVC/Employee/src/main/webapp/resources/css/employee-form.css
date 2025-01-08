@@ -1,0 +1,54 @@
+            body {
+                background-color: #f0f2f5;
+                font-family: 'Arial', sans-serif;
+            }
+
+            .form-container {
+                max-width: 500px;
+                margin: 50px auto;
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                color: #333333;
+            }
+
+            .form-label {
+                font-weight: bold;
+                color: #555555;
+            }
+
+            .error {
+                color: red;
+                font-size: 0.9rem;
+                margin-top: 5px;
+                display: none;
+                /* Hidden by default */
+            }
+
+            .success {
+                color: green;
+                font-size: 0.9rem;
+                margin-top: 5px;
+                display: none;
+            }
+
+            .password-requirements {
+                font-size: 0.85rem;
+                color: #555;
+                margin-top: 5px;
+                display: none;
+            }
+
+            .password-requirements ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+            .password-requirements ul li {
+                list-style-type: disc;
+            }
