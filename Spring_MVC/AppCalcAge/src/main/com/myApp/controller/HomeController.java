@@ -12,8 +12,7 @@ public class HomeController
 {
 
     @RequestMapping("/")
-    public String showHomePage()
-    {
+    public String showHomePage(){
         return "calcAge";
     }
 

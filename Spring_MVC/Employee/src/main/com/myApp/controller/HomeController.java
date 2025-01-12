@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HomeController
 {
     @RequestMapping("/" )
-    public String showHomePage(Model model)
+    public String showHomePage()
     {
-        model.addAttribute("user" , new User());
+
         return "employeeForm";
     }
 
@@ -27,7 +27,7 @@ public class HomeController
         model.addAttribute("email", email);
         model.addAttribute("password", password);
 
-        return "success";
+        return"success";
     }
 }
 

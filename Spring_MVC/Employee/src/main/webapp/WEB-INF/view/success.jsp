@@ -37,7 +37,7 @@
 <body>
 <div id="input-wrapper">
     <h1 id="form-heading" >Success Submitted</h1>
-    <div class="input-box"> Name =>> ${username} </div>
+    <div class="input-box">Name =>> ${username} </div>
     <div class="input-box">Email =>> ${email} </div>
     <div class="input-box">password =>>  ${password} </div>
 </div>

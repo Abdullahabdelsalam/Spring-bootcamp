@@ -1,3 +1,5 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <html lang="en">
 
 <head>
@@ -6,26 +8,28 @@
     <title> User Form</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/user-form.css"
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/user-form.css">
 </head>
 
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="form-container">
             <h3 class="text-center form-title mb-4">User Form</h3>
-            <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
-            <form:form action="/user/process"  modelAttribute="user">
+            <form:form action="/user/process">
+
                 <!-- Username Field -->
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" placeholder="Administrator" path="userName">
                 </div>
+
                 <!-- Password Field -->
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" placeholder="********" path="password">
                 </div>
+
                 <!-- Country Dropdown -->
                 <div class="mb-3">
                     <label for="country" class="form-label">Country</label>
@@ -36,6 +40,7 @@
                         <option>Germany</option>
                     </select>
                 </div>
+
                 <!-- Preferred Programming Language -->
                 <div class="mb-3">
                     <label class="form-label">Preferred Programming Language</label>
@@ -58,6 +63,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Preferred Operating System -->
                 <div class="mb-3">
                     <label class="form-label">Preferred Operating System</label>
@@ -76,6 +82,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-custom w-100">Submit</button>
             </form:form>
